@@ -92,3 +92,23 @@
 
     }
 }
+
+.button-slider-control {
+    position: absolute;
+    z-index: 1;
+    border: 5px solid black;
+
+    &-left {
+        @extend .button-slider-control;
+
+        top: 40%;
+        left: 5%;
+    }
+
+    &-right {
+        @extend .button-slider-control;
+
+        top: 40%;
+        right: 5%;
+    }
+}

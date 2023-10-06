@@ -1,5 +1,5 @@
-<section class="carousel">
-  <ol class="carousel__viewport">
+<section id="carousel" class="carousel">
+  <ul id="carousel__viewport" class="carousel__viewport">
     <li id="carousel__slide1" class="carousel__slide">
       <div class="carousel__slide-text">
         <img class="carousel__slide-image" src="../img/avatar1.png" alt="avatar">
@@ -50,6 +50,18 @@
       </div>
       </div>
     </li>
-
-  </ol>
+  </ul>
+  @@include('button.html', {
+    "isImageInside":"true",
+    "img": "../img/left-arrow.svg",
+    "classname": "button-light button-slider-control-left",
+    "clickfunction": "scrollLeft"
+  })
+  @@include('button.html', {
+    "isImageInside":"true",
+    "img": "../img/right-arrow.svg",
+    "classname": "button-light button-slider-control-right",
+    "clickfunction": "scrollRight"
+  })
 </section>
+<script src="../js/section_slider.js"></script>

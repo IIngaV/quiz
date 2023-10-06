@@ -160,6 +160,20 @@
   border: 1px solid #000000;
 }
 
+.button-slider-control, .button-slider-control-right, .button-slider-control-left {
+  position: absolute;
+  z-index: 1;
+  border: 5px solid black;
+}
+.button-slider-control-left {
+  top: 40%;
+  left: 5%;
+}
+.button-slider-control-right {
+  top: 40%;
+  right: 5%;
+}
+
 .banner {
   font-family: "Raleway-Medium";
   background: #ffffff;
@@ -242,21 +256,29 @@
 }
 
 .carousel {
-  overflow-x: scroll;
+  position: relative;
 }
 
 .carousel__viewport {
   display: flex;
+  overflow-x: scroll;
   gap: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel__viewport::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel__slide {
-  min-width: 20vw;
-  height: 25vw;
+  min-width: 25vw;
+  height: 30vw;
   border-radius: 20px;
   position: relative;
   display: flex;
   flex-direction: column-reverse;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .carousel__slide-image {
