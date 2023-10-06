@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 .button {
+    position: relative;
     background: $color-black;
     border-radius: 16px;
     height: 45px;
@@ -13,6 +14,27 @@
 
     &:hover {
         background: $color-purple;
+    }
+
+    &-oval {
+        @extend .button;
+        width: 22vw;
+        border-radius: 40px;
+
+        &-vk {
+            @extend .button-oval;
+            background: $color-blue;
+        }
+
+        &-telegram {
+            @extend .button-oval;
+            background: $color-blue-telegram;
+        }
+
+        &-tiktok {
+            @extend .button-oval;
+            border: 1px solid $color-blue;
+        }
     }
 
     &-circle {
@@ -30,27 +52,43 @@
             @extend .button-circle;
             background: $color-blue-telegram;
         }
+
+        &img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }
 
 .button-light {
     background: $color-white;
     border-radius: 20px;
-    height: 45px;
-    width: 231px;
+    width: auto;
+    height: auto;
     font-size: 20px;
     color: $color-black;
     margin-top: 5px;
     cursor: pointer;
-    border:0px;
+    border: 0px;
+    padding: 5px 15px 5px 15px;
+
+    img {
+        width: 20px;
+    }
+
+    span {
+        vertical-align: top;
+    }
+
     &:hover {
         background: $color-purple;
     }
+
     &-quiz {
         @extend .button-light;
-        padding: 5px 5px 5px 5px;
+
         border: 1px solid $color-black;
-        width:auto;
-        height:auto;
+
     }
 }

@@ -1,13 +1,14 @@
-<section>
-    <aside class="quiz-description">
-        <h4>Какие виды тестов вам нравятся?</h4>
+<section class="quiz">
+    <aside class="quiz__description">
+        <h5>Какие виды тестов вам нравятся?</h5>
         <p></p>
     </aside>
-    <section class="quiz-section">
-        <h2>Какие виды тестов вам нравятся?</h2>
-        <span>Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг
-            понимаешь, что пролетело полдня.</span>
-        <div class="quiz-section__buttons">
+    <section class="quiz__section">
+        <h1 class="quiz__section-title">Какие виды тестов вам нравятся?</h1>
+        <p>Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг
+            понимаешь, что пролетело полдня.</p>
+            <br/>
+        <section class="quiz__section-buttons">
             @@include('button.html', {
             "isTextInside":"true",
             "text": "На темперамент",
@@ -49,7 +50,8 @@
             "classname": "button-light-quiz",
             })
             
-        </div>
+        </section>
+        <br/>
         @@include('button.html', {
             "isTextInside":"true",
             "text": "Продолжить",

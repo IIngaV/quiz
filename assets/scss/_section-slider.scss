@@ -1,0 +1,69 @@
+@import 'variables.scss';
+
+.carousel {
+    overflow-x: scroll;
+}
+
+.carousel__viewport {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel__slide {
+    min-width: 20vw;
+    height: 25vw;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.carousel__slide-image {
+    z-index: 2;
+    border-radius: 100px;
+    box-shadow: 0 0 0 10px white;
+    position: absolute;
+    bottom: 80%;
+    left: 35%;
+}
+
+.carousel__slide-text {
+
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    background: $color-white;
+    margin: 10px 10px 10px 10px;
+    padding-top: 14%;
+
+    p {
+        padding: 0 5px 0 10px;
+        text-align: left;
+    }
+}
+
+#carousel__slide1 {
+    background-image: url(../img/card_background.jpg);
+}
+
+#carousel__slide2 {
+    background-image: url(../img/card_background2.jpg);
+}
+
+#carousel__slide3 {
+    background-image: url(../img/card_background3.jpg);
+}
+
+#carousel__slide4 {
+    background-image: url(../img/card_background.jpg);
+}
+
+#carousel__slide5 {
+    background-image: url(../img/card_background2.jpg);
+}
+
+#carousel__slide6 {
+    background-image: url(../img/card_background3.jpg);
+}

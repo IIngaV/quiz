@@ -1,7 +1,11 @@
 @use 'fonts.scss';
 @use 'header.scss';
 @use 'button.scss';
-@use 'sectionbanner.scss';
+@use 'section-banner.scss';
+@use 'section-emoji.scss';
+@use 'section-quiz.scss';
+@use 'section-slider.scss';
+@use 'footer.scss';
 @import 'variables.scss';
 
 body {

@@ -1,4 +1,37 @@
 <!-- Footer -->
-<footer>
-  My Footer
+<footer class="footer">
+  <div class="footer__contacts">
+    <div class="footer__item">
+      <p>Телефон</p>
+      <a class="footer__link" href="tel:+375299502745">+375299502745</a>
+    </div>
+    <div class="footer__item">
+      <p>Email</p>
+      <a class="footer__link" href="mailto:ourmail@gmail.com">ourmail@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer__social">
+    <div class="footer__button">
+  @@include('button.html', {
+  "isImageInside":"true",
+  "img": "../img/image-TikTok.png",
+  "classname": "button-oval-tiktok",
+  })
+  @@include('button.html', {
+  "isImageInside":"true",
+  "img": "../img/image-Vk.png",
+  "classname": "button-oval-vk",
+  })
+  @@include('button.html', {
+  "isImageInside":"true",
+  "img": "../img/image-Telegram.png",
+  "classname": "button-oval-telegram",
+  })
+</div>
+<div class="footer__button">
+  <a class="footer__logo" href="#">
+    <img src="../img/logo-white.svg" class="logo" width="209" height="50" alt="Логотип квиза">
+  </a>
+  </div>
+</div>
 </footer>

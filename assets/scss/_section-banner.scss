@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+.banner {
+    font-family: $font-raleway;
+    background: $color-white;
+    display: flex;
+    height: 50vh;
+    position: relative;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.banner__title {
+    font-family: $font-neue-machina-ultra-bold;
+    font-size: 3em;
+    display: flex;
+    flex-flow: column;
+}
+
+.banner__text {
+    display: flex;
+    flex-flow: column;
+}
+
+.banner__textblock {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20% 0 20%;
+    text-align: center;
+    align-items:center;
+}
+
+.banner__left-questions {
+    height: 30vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+}
+
+.banner__right-questions {
+    height: 30vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 30px;
+
+}
