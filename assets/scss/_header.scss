@@ -1,0 +1,93 @@
+@import 'variables.scss';
+.header{
+    background: $color-white;
+}
+.nav {
+    display: flex;
+    border-bottom: 1px solid #F2F2F2;
+    border-radius: 0 0 30px 30px;
+}
+
+.nav__logo {
+    padding-left: 2em;
+}
+
+.nav__menu {
+    list-style: none;
+    text-align: center;
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        color: $color-black;
+        text-decoration: none;
+        font-family: $font-raleway;
+        position: relative;
+        padding-bottom: 12px;
+        margin: 0 24px 0 20px;
+        font-size: 20px;
+        transition: color .2s;
+
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            height: 4px;
+            top: auto;
+            right: 50%;
+            bottom: -5px;
+            left: 50%;
+            background: $color-black;
+            transition: 0.15s ease;
+
+        }
+
+        &:after {
+            border-radius: 0 3px 3px 0;
+        }
+
+        &:before {
+            border-radius: 3px 0 0 3px;
+        }
+
+        &:hover:before {
+            left: 0;
+        }
+
+        &:hover:after {
+            right: 0;
+        }
+
+    }
+
+    .current {
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .nav__menu {
+        padding-top: 0;
+    }
+
+    .nav__menu li {
+        display: block;
+    }
+
+    .nav__menu li:after {
+        content: none;
+    }
+
+    .nav__menu a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}

@@ -1,3 +1,14 @@
+@use 'fonts.scss';
+@use 'header.scss';
+@use 'button.scss';
+@use 'sectionbanner.scss';
+@import 'variables.scss';
+
 body {
-    background-color: red;
+    font-family: $font-raleway;
+    background: $color-light-purple;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
+

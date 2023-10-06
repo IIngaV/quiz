@@ -1,0 +1,56 @@
+@import 'variables.scss';
+
+.button {
+    background: $color-black;
+    border-radius: 16px;
+    height: 45px;
+    width: 231px;
+    font-size: 20px;
+    color: $color-white;
+    border: 0px;
+    margin-top: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background: $color-purple;
+    }
+
+    &-circle {
+        @extend .button;
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+
+        &-vk {
+            @extend .button-circle;
+            background: $color-blue;
+        }
+
+        &-telegram {
+            @extend .button-circle;
+            background: $color-blue-telegram;
+        }
+    }
+}
+
+.button-light {
+    background: $color-white;
+    border-radius: 20px;
+    height: 45px;
+    width: 231px;
+    font-size: 20px;
+    color: $color-black;
+    margin-top: 5px;
+    cursor: pointer;
+    border:0px;
+    &:hover {
+        background: $color-purple;
+    }
+    &-quiz {
+        @extend .button-light;
+        padding: 5px 5px 5px 5px;
+        border: 1px solid $color-black;
+        width:auto;
+        height:auto;
+    }
+}

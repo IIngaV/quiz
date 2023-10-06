@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gulp Html Include Boilerplate</title>
+  <title>Quiz</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
 
 <body>
-  @@include('./header.html')
-
+  @@include('./assets/html/header.html')
   <!-- Content -->
+  <main>
+    @@include('./assets/html/section_banner.html')
+    @@include('./assets/html/section_emoji.html')
+    @@include('./assets/html/section_quiz.html')
+  </main>
   <section>
     <h1>Hello world1235</h1>
   </section>
-
-  @@include('./footer.html')
+  @@include('./assets/html/footer.html')
 </body>
 
 </html>
