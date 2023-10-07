@@ -1,0 +1,263 @@
+@import 'variables.scss';
+
+.modal {
+    display: none;
+    background: $color-white;
+    position: fixed;
+    bottom: 10vh;
+    z-index: 3;
+    top: 10vh;
+    left: 15vw;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    right: 15vw;
+    color: $color-black;
+    padding: 20px;
+    height: max-content;
+    max-width: 60vw;
+}
+
+.modal-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.close {
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    background-color: $color-white;
+    border-radius: 10px;
+    border: 1px solid $color-black;
+    margin-left: 91%;
+
+    &:hover {
+        background: $color-purple;
+
+        &:after,
+        &:before {
+            background-color: $color-white;
+        }
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 10%;
+        background-color: $color-black;
+
+    }
+
+    &:before {
+        top: 45%;
+        left: 20%;
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        top: 45%;
+        left: 20%;
+        transform: rotate(45deg);
+    }
+}
+
+
+.modal__title {
+    font-family: $font-neue-machina-bold;
+    font-size: 3em;
+}
+
+.modal_visible {
+    display: block;
+}
+
+.body_block {
+    overflow: hidden;
+    margin-right: 17px;
+}
+
+.modal-form__text-input {
+    font-family: $font-raleway;
+    border: none;
+    border-bottom: 2px solid $color-black;
+    width: 49%;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 2em;
+
+    &-file {
+        @extend .modal-form__text-input;
+        flex-grow:3;
+        width: 72%;
+        padding: 8px 8px 8px 8px;
+        border-bottom: 0;
+
+        &.error {
+            @extend .modal-form__text-input-file;
+            color: $color-pink;
+        }
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+}
+
+.modal-form__input-radio {
+    border: 1px solid $color-black;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+
+    &.highlighted {
+        background-color: $color-black;
+        border-color: $color-black;
+        color: $color-white;
+
+        .radio-button {
+            &:before {
+                transform: translate(-50%, -50%) scale(1);
+
+            }
+        }
+
+        &:hover {
+            background: $color-black;
+
+            .radio-button {
+                &:before {
+                    background: $color-purple;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background: $color-purple;
+    }
+
+}
+
+.radio {
+    display: none;
+}
+
+.radio-button {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: $color-white;
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    vertical-align: text-top;
+    margin-right: 5px;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: $color-black;
+        border-radius: 50%;
+        position: absolute;
+        left: 51%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 0.2s ease-in;
+
+    }
+
+}
+
+#button_file {
+    display: none;
+}
+
+.modal-file-button {
+    margin: auto 0;
+    flex-grow: 1;
+}
+
+.modal-form__radio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.input-file {
+    height: 4em;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    border-bottom: 2px solid #000000;
+
+    &.error {
+        @extend .input-file;
+        color: $color-pink;
+        border-bottom: 2px solid $color-pink;
+    }
+}
+
+.modal-form__warning {
+    display: none;
+    width: 40px;
+    padding: 8px;
+}
+
+.tooltip {
+    display: flex;
+    position: relative;
+
+    .tooltip__block {
+        display: none;
+        color: $color-white;
+        top: 3.5em;
+        right: 0.6em;
+    }
+
+    &:hover {
+        .tooltip__block {
+            width: max-content;
+            padding: 10px 10px;
+            position: absolute;
+            background: $color-pink;
+            border-radius: 10px;
+            display: flex;
+
+            &:before {
+                content: "";
+                border: solid transparent;
+                position: absolute;
+                bottom: 100%;
+                right: 8px;
+                border-bottom-color: $color-pink;
+                border-width: 9px;
+                margin-right: -1px;
+            }
+
+        }
+    }
+
+    &:hover {
+        .tooltip__block {
+            display: block;
+        }
+    }
+
+}
+.modal__contact-success{
+    display:none;
+}
+.emoji_wink{
+    width: 100px;
+}
+
+//&:hover {

@@ -1,0 +1,63 @@
+<section id="modal" class="modal bounceIn">
+    <div class="close"></div>
+    <div class="modal__contact-form">
+        <header class="modal__title">Заполните контактные данные</header>
+        <p>Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+        <form class="modal-form">
+            <input class="modal-form__text-input" type="text" placeholder="Ваше имя">
+            <input class="modal-form__text-input" type="text" placeholder="Фамилия"><br>
+            <div class="input-file">
+                <input class="modal-form__text-input-file" type="text" placeholder="Ваш комментарий">
+
+                @@include('button.html', {
+                "isTextInside":"true",
+                "text": "Прикрепить файл",
+                "classname": "button modal-file-button",
+                })
+                <div class="tooltip">
+                    <img class="modal-form__warning" src="../img/warning.svg" alt="warning">
+                    <div class="tooltip__block">Это обязательное поле</div>
+                </div>
+                <input id="button_file" type='file' /><br>
+            </div>
+
+            <p>Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+            <div class="modal-form__radio-buttons">
+                <label for=" quiz_radio_1" class="modal-form__input-radio"><span class="radio-button"> <input
+                            name="radio" id="quiz_radio_1" class="radio" type="radio" value="1"></span>Не знаю</label>
+                <label for="quiz_radio_2" class="modal-form__input-radio"> <span class="radio-button"><input
+                            name="radio" id="quiz_radio_2" class="radio" type="radio" value="2"></span>Увидел
+                    это</label>
+                <label for="quiz_radio_3" class="modal-form__input-radio"> <span class="radio-button"><input
+                            name="radio" id="quiz_radio_3" class="radio" type="radio" value="3"></span>Вон то</label>
+                <label for="quiz_radio_4" class="modal-form__input-radio"> <span class="radio-button"><input
+                            name="radio" id="quiz_radio_4" class="radio" type="radio" value="4"></span>Вон то</label>
+                <label for="quiz_radio_5" class="modal-form__input-radio"> <span class="radio-button"><input
+                            name="radio" id="quiz_radio_5" class="radio" type="radio" value="5"></span>Увидел
+                    это</label>
+                <label for="quiz_radio_6" class="modal-form__input-radio"> <span class="radio-button"><input
+                            name="radio" id="quiz_radio_6" class="radio" type="radio" value="6"></span>Не знаю</label>
+            </div>
+            <br>
+            @@include('button.html', {
+            "isTextInside":"true",
+            "text": "Продолжить",
+            "classname": "button-modal",
+            })
+
+        </form>
+    </div>
+    <div class="modal__contact-success">
+        <img class="emoji-wink" src="../img/emoji-wink.svg" alt="emoji-wink">
+        <header class="modal__title">Ваши данные отправлены</header>
+        <p>Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+        <br><br>
+            @@include('button.html', {
+            "isTextInside":"true",
+            "text": "Вернуться на сайт",
+            "classname": "button-modal back-to-site",
+            })
+            <br>
+    </div>
+</section>
+<script src="../js/modal.js"></script>

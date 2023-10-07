@@ -15,7 +15,10 @@
     &:hover {
         background: $color-purple;
     }
-
+    &-modal{
+        @extend .button;
+        width: 100%;
+    }
     &-oval {
         @extend .button;
         width: 22vw;
