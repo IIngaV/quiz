@@ -6,14 +6,20 @@
 
 }
 
-.quiz__section {
+.quiz__block {
     width: 60vw;
     background: $color-white;
     border-radius: 25px;
     padding: 0 20px 20px 20px;
     box-shadow:
-    0 -20px 0 -14px $color-light-purple2,
-    0 -30px 0 -19px $color-light-purple3;
+        0 -20px 0 -14px $color-light-purple2,
+        0 -30px 0 -19px $color-light-purple3;
+}
+
+.quiz__section2,
+.quiz__section3,
+.button_prev {
+    display: none;
 }
 
 .quiz__section-title {
@@ -29,4 +35,161 @@
     color: $color-white;
     padding: 5px 5px 5px 15px;
     text-align: left;
+}
+
+.quiz__radio-buttons, .quiz__checkbox-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.quiz__text-input {
+    font-family: $font-raleway;
+    border: none;
+    border-bottom: 2px solid $color-black;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 1.5em;
+}
+
+.quiz__buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.quiz__select {
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+    font-size: 1.15rem;
+    color: #000;
+    display: flex;
+    border: 0;
+    &.active {
+        .select-dropdown {
+    
+            display: block;
+            transform: scaleY(1);
+        }
+        .arrow {
+            transform: rotate(132deg);
+        }
+        
+    }
+    
+}
+
+.select-button {
+    width: 100%;
+    font-size: 1.15rem;
+    background-color: $color-white;
+    padding: 10px;
+    border: 1px solid $color-black;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected-value {
+    text-align: left;
+}
+
+.arrow {
+    border-top: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+    height: 15px;
+    width: 15px;
+}
+
+.arrow-top {
+    transform: rotate(-45deg);
+}
+
+.select-dropdown {
+    position: absolute;
+    list-style: none;
+    width: max-content;
+    background-color: #fff;
+    border: 1px solid $color-black;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 3;
+    transform: scaleY(0);
+    display: none;
+    top: 1.5em;
+    li {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        border: 0;
+        border-bottom: 1px solid black;
+        width: 19.5em;
+
+        label {
+            width: 100%;
+            padding: 8px 10px;
+            cursor: pointer;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        &:hover {
+            background-color: $color-purple;
+    
+        }
+    }
+}
+.select-dropdown input[type="radio"] {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.checkbox_close {
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    background-color: $color-white;
+    border-radius: 20px;
+    border: 1px solid $color-black;
+
+    &:hover {
+        background: $color-purple;
+
+        &:after,
+        &:before {
+            background-color: $color-white;
+        }
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 10%;
+        background-color: $color-black;
+
+    }
+
+    &:before {
+        top: 45%;
+        left: 20%;
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        top: 45%;
+        left: 20%;
+        transform: rotate(45deg);
+    }
 }

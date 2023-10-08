@@ -12,7 +12,7 @@ open_modal[0].onclick = function () {
     modal.classList.add('modal_visible');
     body.classList.add('body_block');
     let button_modal = document.getElementsByClassName('button-modal')[0];
-    let modal_radio_buttons = document.getElementsByClassName("modal-form__input-radio");
+    let modal_radio_buttons = document.getElementsByClassName("modal_form__input-radio");
     for (let radio_button of modal_radio_buttons) {
         if (radio_button) {
             radio_button.onclick = function () {
@@ -24,6 +24,7 @@ open_modal[0].onclick = function () {
         }
     };
     let modal_file_button = document.getElementsByClassName('modal-file-button')[0];
+    const modal_file_button_content = modal_file_button.innerHTML;
     let button_file = document.getElementById("button_file");
     modal_file_button.addEventListener("click", (event) => {
         button_file.click();
@@ -38,11 +39,11 @@ open_modal[0].onclick = function () {
 
                 modal_file_button.textContent = file['name'];
             } else {
-                modal_file_button.textContent = "Приложить файл";
+                modal_file_button.innerHTML = modal_file_button_content;
             }
 
         } else {
-            modal_file_button.textContent = "Приложить файлы";
+            modal_file_button.innerHTML = modal_file_button_content;
         }
 
     });

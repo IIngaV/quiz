@@ -1,9 +1,8 @@
 <button class="@@classname">
-    @@if (context.isImageInside) {
-        <img  src="@@img" />
-    }
-    @@if (context.isTextInside) {
+    @@if (context.text) {
         @@text
     }
-    
+    @@if (context.img) {
+        <img  src="@@img" />
+    }
 </button>

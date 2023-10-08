@@ -91,7 +91,7 @@
 
     &-file {
         @extend .modal-form__text-input;
-        flex-grow:3;
+        flex-grow: 3;
         width: 72%;
         padding: 8px 8px 8px 8px;
         border-bottom: 0;
@@ -109,74 +109,6 @@
         outline-offset: 0;
     }
 }
-
-.modal-form__input-radio {
-    border: 1px solid $color-black;
-    border-radius: 20px;
-    padding: 5px 20px 5px 20px;
-    cursor: pointer;
-
-    &.highlighted {
-        background-color: $color-black;
-        border-color: $color-black;
-        color: $color-white;
-
-        .radio-button {
-            &:before {
-                transform: translate(-50%, -50%) scale(1);
-
-            }
-        }
-
-        &:hover {
-            background: $color-black;
-
-            .radio-button {
-                &:before {
-                    background: $color-purple;
-                }
-            }
-        }
-    }
-
-    &:hover {
-        background: $color-purple;
-    }
-
-}
-
-.radio {
-    display: none;
-}
-
-.radio-button {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: $color-white;
-    border: 1px solid $color-black;
-    border-radius: 50%;
-    vertical-align: text-top;
-    margin-right: 5px;
-
-    &:before {
-        content: '';
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        background: $color-black;
-        border-radius: 50%;
-        position: absolute;
-        left: 51%;
-        top: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        transition: 0.2s ease-in;
-
-    }
-
-}
-
 #button_file {
     display: none;
 }
@@ -186,7 +118,7 @@
     flex-grow: 1;
 }
 
-.modal-form__radio-buttons {
+.form__radio-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -253,11 +185,11 @@
     }
 
 }
-.modal__contact-success{
-    display:none;
-}
-.emoji_wink{
-    width: 100px;
+
+.modal__contact-success {
+    display: none;
 }
 
-//&:hover {
+.emoji_wink {
+    width: 100px;
+}

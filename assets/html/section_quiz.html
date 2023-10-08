@@ -3,59 +3,153 @@
         <h5>Какие виды тестов вам нравятся?</h5>
         <p></p>
     </aside>
-    <section class="quiz__section">
-        <h1 class="quiz__section-title">Какие виды тестов вам нравятся?</h1>
-        <p>Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг
-            понимаешь, что пролетело полдня.</p>
-            <br/>
-        <section class="quiz__section-buttons">
+    <section class="quiz__block">
+        <div class="quiz__section1">
+            <h1 class="quiz__section-title">Какие виды тестов вам нравятся?</h1>
+            <p>Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг
+                понимаешь, что пролетело полдня.</p>
+            <br />
+            <section class="quiz__section-buttons">
+                <div class="quiz__checkbox-buttons">
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "На темперамент",
+                    "label": "На темперамент",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "Кто я из вселенной Марвел",
+                    "label": "Кто я из вселенной Марвел",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "Увидел это",
+                    "label": "Увидел это",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "Мое тотемное животное",
+                    "label": "Мое тотемное животное",
+                    })
+                    @@include('radio_button.html', {
+                        "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                        "radio_group_name": "quiz_checkbox",
+                        "value": "На IQ",
+                        "label": "На IQ",
+                        })
+                        @@include('radio_button.html', {
+                            "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                            "radio_group_name": "quiz_checkbox",
+                            "value": "На словарный запас",
+                            "label": "На словарный запас",
+                            })
+                            @@include('radio_button.html', {
+                                "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                                "radio_group_name": "quiz_checkbox",
+                                "value": "На логическое мышление",
+                                "label": "На логическое мышление",
+                                })
+                                @@include('radio_button.html', {
+                                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                                    "radio_group_name": "quiz_checkbox",
+                                    "value": "На уровень интеллекта",
+                                    "label": "На уровень интеллекта",
+                                    })
+                </div>
+
+            </section>
+        </div>
+        <div class="quiz__section2">
+            <h1 class="quiz__section-title">Вы любите проходить тесты?</h1>
+            <p>Нам важно узнать насолько часто Вы проходите тесты.</p>
+            <br />
+            <section class="quiz__section-buttons">
+                <div class="quiz__radio-buttons">
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"quiz_form__input-radio",
+                    "radio_group_name": "quiz_radio",
+                    "value": "Нет, я не никогда не прохожу тесты",
+                    "label": "Нет, я не никогда не прохожу тесты",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"quiz_form__input-radio",
+                    "radio_group_name": "quiz_radio",
+                    "value": "Заставляю себя проходить тесты",
+                    "label": "Заставляю себя проходить тесты",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"quiz_form__input-radio",
+                    "radio_group_name": "quiz_radio",
+                    "value": "Не люблю проходить тесты, но иногда приходится",
+                    "label": "Не люблю проходить тесты, но иногда приходится",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"quiz_form__input-radio",
+                    "radio_group_name": "quiz_radio",
+                    "value": "Да, я прохожу все тесты",
+                    "label": "Да, я прохожу все тесты",
+                    })
+                </div>
+            </section>
+
+        </div>
+        <div class="quiz__section3">
+            <img class="emoji-wink" src="../img/emoji-ok.svg" alt="emoji-wink">
+            <h1 class="quiz__section-title">Спасибо за ответы! Заполните форму ниже</h1>
+            <p>Ваше мнение важно для нас. Прикрепите фото с Вашей любимой картинкой и оставьте комментарий насколько
+                понравился Вам тест.</p>
+            <br />
+            <section class="quiz__section-buttons">
+                <input class="quiz__text-input" type="text" placeholder="Ваше мнение сюда"><br>
+                <br>
+
+
+                <div class="quiz__select">
+                    <button class="select-button">
+                        <span class="selected-value">Open this select menu</span>
+                        <span class="arrow arrow-top"></span>
+                    </button>
+                    <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                        <li role="option">
+                            <input type="radio" id="github" name="social-account" />
+                            <label for="github">Очень понравился</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" id="instagram" name="social-account" />
+                            <label for="instagram">Не понравился</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" id="facebook" name="social-account" />
+                            <label for="facebook">Пройду еще раз</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" id="linkedIn" name="social-account" />
+                            <label for="linkedIn">Посоветую пройти всем</label>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <br>
+        <div class="quiz__buttons">
             @@include('button.html', {
-            "isTextInside":"true",
-            "text": "На темперамент",
-            "classname": "button-light-quiz",
-            })
-            @@include('button.html', {
-            "isTextInside":"true",
-            "text": "Кто я из вселенной Марвел",
-            "classname": "button-light-quiz",
-            })
-            @@include('button.html', {
-            "isTextInside":"true",
-            "text": "Увидел это",
-            "classname": "button-light-quiz",
-            })
-            @@include('button.html', {
-            "isTextInside":"true",
-            "text": "Мое тотемное животное",
-            "classname": "button-light-quiz",
-            })
-            @@include('button.html', {
-            "isTextInside":"true",
-            "text": "На IQ",
-            "classname": "button-light-quiz",
-            })
-            @@include('button.html', {
-            "isTextInside":"true",
-            "text": "На словарный запас",
-            "classname": "button-light-quiz",
-            })
-            @@include('button.html', {
-            "isTextInside":"true",
-            "text": "На логическое мышление",
-            "classname": "button-light-quiz",
-            })
-            @@include('button.html', {
-            "isTextInside":"true",
-            "text": "На уровень интеллекта",
-            "classname": "button-light-quiz",
-            })
-            
-        </section>
-        <br/>
-        @@include('button.html', {
-            "isTextInside":"true",
-            "text": "Продолжить",
-            "classname": "button",
-            })
+                
+                "text": " Назад",
+                "classname": "button-light-form button_prev",
+                })
+                @@include('button.html', {
+                
+                "text": "Продолжить",
+                "classname": "button button_next",
+                })
+        </div>
+       
+
     </section>
+
 </section>
+<script src="../js/quiz.js"></script>
