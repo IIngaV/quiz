@@ -47,6 +47,7 @@
     background: $color-white;
     margin: 10px 10px 10px 10px;
     padding-top: 14%;
+    font-size: 1em;
 
     p {
         padding: 0 5px 0 10px;
@@ -76,4 +77,36 @@
 
 #carousel__slide6 {
     background-image: url(../img/card_background3.jpg);
+}
+
+@media (max-width:1200px) {
+    .carousel {
+        height: 20em;
+
+        .button-slider-control, .button-slider-control-right, .button-slider-control-left {
+            display: none;
+        }
+
+        .carousel__viewport {
+            height: 100%;
+
+            .carousel__slide {
+                height: 20em;
+                width: 16em;
+                min-width: 16em;
+
+                .carousel__slide-text {
+                    font-size: 1em;
+
+                    h3 {
+                        margin: 0.5em 0;
+                    }
+
+                    p {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
 }

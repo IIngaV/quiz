@@ -3,6 +3,7 @@ const fileinclude = require('gulp-file-include');
 const server = require('browser-sync').create();
 const { watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+var replace = require('gulp-replace');
 
 const paths = {
   scripts: {
@@ -11,15 +12,23 @@ const paths = {
   }
 };
 
-// gulp.task('sass', function () {
-//   gulp.src('./assets/**/*.scss')
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(gulp.dest('./css'));
-// });
- 
-// gulp.task('sass:watch', function () {
-//   gulp.watch('./assets/**/*.scss', ['sass']);
-// });
+gulp.task('images', function () {
+  gulp.src('assets/img//*')
+    .pipe(gulp.dest('build/img'));
+  
+    return gulp.src('build/index.html')
+    .pipe(replace('src="../img/', 'src="img/'))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('scripts', function () {
+  gulp.src('assets/js//*')
+    .pipe(gulp.dest('build/img'));
+  
+    return gulp.src('build/index.html')
+    .pipe(replace('src="../js/', 'src="js/'))
+    .pipe(gulp.dest('build'));
+});
 
 // Reload Server
 async function reload() {

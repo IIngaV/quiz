@@ -4,7 +4,8 @@ let elem_visible = document.getElementById('carousel__viewport');
 var carousel_slide = document.getElementsByClassName('carousel__slide')[0];
 
 document.addEventListener("DOMContentLoaded", () => {
-    elem_visible.scroll({ left: elem_visible.offsetWidth/2 });
+    const offset = window.innerWidth < 750 ? 690 : elem_visible.offsetWidth/2;
+    elem_visible.scroll({ left: offset });
 });
 
 leftButton.addEventListener("click", function () {

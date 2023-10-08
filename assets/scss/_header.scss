@@ -1,11 +1,19 @@
 @import 'variables.scss';
-.header{
+
+.header {
     background: $color-white;
 }
+
 .nav {
     display: flex;
     border-bottom: 1px solid #F2F2F2;
     border-radius: 0 0 30px 30px;
+}
+
+.social_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .nav__logo {
@@ -90,4 +98,88 @@
         padding: 25px 0 20px;
         margin: 0 30px;
     }
+}
+
+.mobile_navigation {
+    display: none;
+}
+
+.mobile_navigation_icon {
+    display: none;
+}
+
+.modal_visible {
+    &.mobile_navigation {
+        display: flex;
+    }
+}
+
+.mobile_navigation {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100vw;
+    height: 88vh;
+    background-color: $color-light-purple;
+    z-index: 2;
+    top: 4em;
+
+    .nav__menu-mobile {
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            height: 3em;
+            font-size: 1em;
+            background: $color-white;
+            border-radius: 15px;
+
+            a {
+                text-decoration: none;
+                color: $color-black;
+            }
+        }
+    }
+
+    .nav__menu-social-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .button.open_modal {
+        align-self: center;
+    }
+}
+
+@media (max-width: 1170px) {
+    .nav__menu {
+        display: none;
+    }
+
+    .social_buttons {
+        display: none;
+    }
+
+    .mobile_navigation_icon {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        padding: 0 20px;
+    }
+
+    .nav {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
 }

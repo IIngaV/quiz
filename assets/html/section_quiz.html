@@ -1,8 +1,18 @@
 <section class="quiz">
-    <aside class="quiz__description">
-        <h5>Какие виды тестов вам нравятся?</h5>
-        <p></p>
-    </aside>
+    <div class="quiz__left-block">
+        <aside class="quiz__question1 current">
+            <h5>Какие виды тестов вам нравятся?</h5>
+            <p class="quiz__answer1"></p>
+        </aside>
+        <aside class="quiz__question2">
+            <h5>Вы любите проходить тесты?</h5>
+            <p class="quiz__answer2"></p>
+        </aside>
+        <aside class="quiz__question3">
+            <h5>Спасибо за ответы! Заполните форму ниже</h5>
+            <p class="quiz__answer3"></p>
+        </aside>
+    </div>
     <section class="quiz__block">
         <div class="quiz__section1">
             <h1 class="quiz__section-title">Какие виды тестов вам нравятся?</h1>
@@ -14,51 +24,51 @@
                     @@include('radio_button.html', {
                     "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
                     "radio_group_name": "quiz_checkbox",
-                    "value": "На темперамент",
+                    "value": "quiz__checkbox1",
                     "label": "На темперамент",
                     })
                     @@include('radio_button.html', {
                     "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
                     "radio_group_name": "quiz_checkbox",
-                    "value": "Кто я из вселенной Марвел",
+                    "value": "quiz__checkbox2",
                     "label": "Кто я из вселенной Марвел",
                     })
                     @@include('radio_button.html', {
                     "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
                     "radio_group_name": "quiz_checkbox",
-                    "value": "Увидел это",
+                    "value": "quiz__checkbox3",
                     "label": "Увидел это",
                     })
                     @@include('radio_button.html', {
                     "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
                     "radio_group_name": "quiz_checkbox",
-                    "value": "Мое тотемное животное",
+                    "value": "quiz__checkbox4",
                     "label": "Мое тотемное животное",
                     })
                     @@include('radio_button.html', {
-                        "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
-                        "radio_group_name": "quiz_checkbox",
-                        "value": "На IQ",
-                        "label": "На IQ",
-                        })
-                        @@include('radio_button.html', {
-                            "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
-                            "radio_group_name": "quiz_checkbox",
-                            "value": "На словарный запас",
-                            "label": "На словарный запас",
-                            })
-                            @@include('radio_button.html', {
-                                "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
-                                "radio_group_name": "quiz_checkbox",
-                                "value": "На логическое мышление",
-                                "label": "На логическое мышление",
-                                })
-                                @@include('radio_button.html', {
-                                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
-                                    "radio_group_name": "quiz_checkbox",
-                                    "value": "На уровень интеллекта",
-                                    "label": "На уровень интеллекта",
-                                    })
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "quiz__checkbox5",
+                    "label": "На IQ",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "quiz__checkbox6",
+                    "label": "На словарный запас",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "quiz__checkbox7",
+                    "label": "На логическое мышление",
+                    })
+                    @@include('radio_button.html', {
+                    "radio_button_wrapper_class":"checkbox quiz_form__input-checkbox",
+                    "radio_group_name": "quiz_checkbox",
+                    "value": "quiz__checkbox8",
+                    "label": "На уровень интеллекта",
+                    })
                 </div>
 
             </section>
@@ -110,25 +120,25 @@
 
                 <div class="quiz__select">
                     <button class="select-button">
-                        <span class="selected-value">Open this select menu</span>
+                        <span class="selected-value">Очень понравился</span>
                         <span class="arrow arrow-top"></span>
                     </button>
-                    <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                    <ul class="select-dropdown active" role="listbox" id="select-dropdown">
                         <li role="option">
-                            <input type="radio" id="github" name="social-account" />
-                            <label for="github">Очень понравился</label>
+                            <input type="radio"  name="select-dropdown" />
+                            <label >Очень понравился</label>
                         </li>
                         <li role="option">
-                            <input type="radio" id="instagram" name="social-account" />
-                            <label for="instagram">Не понравился</label>
+                            <input type="radio" name="select-dropdown" />
+                            <label >Не понравился</label>
                         </li>
                         <li role="option">
-                            <input type="radio" id="facebook" name="social-account" />
-                            <label for="facebook">Пройду еще раз</label>
+                            <input type="radio"  name="select-dropdown" />
+                            <label >Пройду еще раз</label>
                         </li>
                         <li role="option">
-                            <input type="radio" id="linkedIn" name="social-account" />
-                            <label for="linkedIn">Посоветую пройти всем</label>
+                            <input type="radio"  name="select-dropdown" />
+                            <label >Посоветую пройти всем</label>
                         </li>
                     </ul>
                 </div>
@@ -137,17 +147,17 @@
         <br>
         <div class="quiz__buttons">
             @@include('button.html', {
-                
-                "text": " Назад",
-                "classname": "button-light-form button_prev",
-                })
-                @@include('button.html', {
-                
-                "text": "Продолжить",
-                "classname": "button button_next",
-                })
+
+            "text": " Назад",
+            "classname": "button-light-form button_prev",
+            })
+            @@include('button.html', {
+
+            "text": "Продолжить",
+            "classname": "button button_next",
+            })
         </div>
-       
+
 
     </section>
 

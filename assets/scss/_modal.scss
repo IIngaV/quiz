@@ -31,7 +31,7 @@
     background-color: $color-white;
     border-radius: 10px;
     border: 1px solid $color-black;
-    margin-left: 91%;
+    right: 0.5em;
 
     &:hover {
         background: $color-purple;
@@ -109,6 +109,7 @@
         outline-offset: 0;
     }
 }
+
 #button_file {
     display: none;
 }
@@ -192,4 +193,31 @@
 
 .emoji_wink {
     width: 100px;
+}
+
+@media (max-width: 1170px) {
+    .modal {
+        max-width: 100vw;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        .modal__contact-form {
+            overflow: scroll;
+        }
+
+        .modal__title {
+            font-size: 2em;
+        }
+
+        .modal-form__text-input {
+            width: 100%;
+            font-size: 1em;
+        }
+
+        .button.modal-file-button {
+            font-size: 0;
+            width: max-content;
+        }
+    }
 }

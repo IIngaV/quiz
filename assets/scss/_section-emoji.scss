@@ -5,4 +5,17 @@
     display: flex;
     flex-wrap: wrap;
 }
+@media (max-width: 600px) {
+    .section-emoji {
+        width: 100vw;
+        margin: 0;
+        display: flex;
+        flex-wrap: unset;
+        flex-direction: row;
+        overflow: scroll;
+        .button-light{
+            white-space: nowrap;
+        }
+    }
+}
 
