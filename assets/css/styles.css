@@ -40,6 +40,12 @@
 }
 .nav__menu li {
   display: inline-block;
+  position: relative;
+}
+.nav__menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 .nav__menu a {
   color: #000000;
@@ -108,6 +114,30 @@
   display: flex;
 }
 
+.submenu {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  width: 200px;
+  padding: 15px 0 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.15s ease;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.submenu a {
+  color: #ffffff;
+  border-radius: 10px;
+  background: #000000;
+  padding: 5px 10px;
+  transition: 0.15s ease;
+}
+.submenu a:hover {
+  background: #9E00FF;
+}
+
 .mobile_navigation {
   display: none;
   flex-direction: column;
@@ -129,14 +159,16 @@
 }
 .mobile_navigation .nav__menu-mobile li {
   display: flex;
-  align-items: center;
+  vertical-align: middle;
   padding: 0 15px;
   height: 3em;
   font-size: 1em;
   background: #ffffff;
   border-radius: 15px;
+  flex-direction: column;
 }
 .mobile_navigation .nav__menu-mobile li a {
+  padding: 10px;
   text-decoration: none;
   color: #000000;
 }
@@ -151,6 +183,27 @@
 }
 
 @media (max-width: 1170px) {
+  .submenu {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    margin: 1.5em;
+    width: 100%;
+    left: 0;
+    padding: 15px 0 15px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .submenu a {
+    color: #000000;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 5px 10px;
+  }
+  .submenu a:hover {
+    background: #9E00FF;
+  }
   .nav__menu {
     display: none;
   }
@@ -317,7 +370,17 @@
   border-radius: 30px;
 }
 
+.mobile {
+  display: none;
+}
+
 @media (max-width: 900px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
   .banner__left-questions {
     height: 25vw;
   }
@@ -357,6 +420,7 @@
   margin-top: 5%;
   flex-wrap: wrap;
   gap: 5px;
+  justify-content: center;
 }
 .quiz__left-block {
   display: flex;
@@ -756,14 +820,15 @@
   bottom: 10vh;
   z-index: 3;
   top: 10vh;
-  left: 15vw;
   border-radius: 20px;
   box-shadow: 0 0 10px 5px rgb(221, 221, 221);
-  right: 15vw;
   color: #000000;
   padding: 20px;
   height: max-content;
   max-width: 60vw;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .modal-form {
@@ -922,6 +987,7 @@
     top: 0;
     left: 0;
     right: 0;
+    margin: unset;
   }
   .modal .modal__contact-form {
     overflow: scroll;
@@ -936,6 +1002,12 @@
   .modal .button.modal-file-button {
     font-size: 0;
     width: max-content;
+  }
+}
+@media (max-width: 700px) {
+  .modal {
+    height: 95vh;
+    overflow: scroll;
   }
 }
 .checkbox_close {

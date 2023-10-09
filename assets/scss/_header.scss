@@ -26,6 +26,17 @@
 
     li {
         display: inline-block;
+        position: relative;
+
+        &:hover {
+            .submenu {
+                visibility: visible;
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+
     }
 
     a {
@@ -88,6 +99,7 @@
 
     .nav__menu li {
         display: block;
+        
     }
 
     .nav__menu li:after {
@@ -114,6 +126,33 @@
     }
 }
 
+.submenu {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    width:200px;
+    padding: 15px 0 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.15s ease;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    a {
+
+        color: $color-white;
+        border-radius: 10px;
+        background: $color-black;
+        padding: 5px 10px;
+        transition: 0.15s ease;
+
+        &:hover {
+            background: $color-purple;
+        }
+    }
+
+}
+
 .mobile_navigation {
     display: none;
     flex-direction: column;
@@ -132,17 +171,20 @@
         flex-direction: column;
         gap: 10px;
         padding: 0;
-
+        
         li {
             display: flex;
-            align-items: center;
+            vertical-align: middle;
             padding: 0 15px;
             height: 3em;
             font-size: 1em;
             background: $color-white;
             border-radius: 15px;
+            flex-direction: column;
+
 
             a {
+                padding:10px;
                 text-decoration: none;
                 color: $color-black;
             }
@@ -162,6 +204,31 @@
 }
 
 @media (max-width: 1170px) {
+    
+    .submenu {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        margin:1.5em;
+        width: 100%;
+        left:0;
+        padding: 15px 0 15px;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        a {
+    
+            color: $color-black;
+            border-radius: 10px;
+            background: $color-white;
+            padding: 5px 10px;
+    
+            &:hover {
+                background: $color-purple;
+            }
+        }
+    
+    }
     .nav__menu {
         display: none;
     }

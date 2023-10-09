@@ -6,28 +6,30 @@
     </a>
     <ul class="nav__menu">
       <li><a href="/">Главная</a></li>
-      <li><a href="/">Квиз</a></li>
-      <li><a href="/">Отзывы</a></li>
-      <li><a href="/">Не главная</a></li>
+      <li><a href="#quiz">Квиз</a></li>
+      <li><a href="#carousel">Отзывы</a></li>
+      <li><a href="/" class="down">Не главная</a>
+        <ul class="submenu">
+          <li><a href="">Подпункт</a></li>
+          <li><a href="">Еще подпункт</a></li>
+          <li><a href="">И еще подпункт</a></li>
+        </ul>
+      </li>
     </ul>
     <div class="social_buttons">
       @@include('button.html', {
-
       "text": "Связаться с нами",
       "classname": "button open_modal",
       })
       @@include('button.html', {
-
       "img": "../img/image-TikTok.png",
       "classname": "button-circle",
       })
       @@include('button.html', {
-
       "img": "../img/image-Vk.png",
       "classname": "button-circle-vk",
       })
       @@include('button.html', {
-
       "img": "../img/image-Telegram.png",
       "classname": "button-circle-telegram",
       })
@@ -36,29 +38,31 @@
     <div class="mobile_navigation">
       <ul class="nav__menu-mobile">
         <li><a href="/">Главная</a></li>
-        <li><a href="/">Квиз</a></li>
-        <li><a href="/">Отзывы</a></li>
-        <li><a href="/">Не главная</a></li>
+        <li><a href="#quiz">Квиз</a></li>
+        <li><a href="#carousel">Отзывы</a></li>
+        <li><a href="/">Не главная</a>
+          <ul class="submenu">
+            <li><a href="">Подпункт</a></li>
+            <li><a href="">Еще подпункт</a></li>
+            <li><a href="">И еще подпункт</a></li>
+          </ul>
+        </li>
       </ul>
       <div class="nav__menu-social-buttons">
         @@include('button.html', {
-
         "img": "../img/image-TikTok.png",
         "classname": "button-circle",
         })
         @@include('button.html', {
-
         "img": "../img/image-Vk.png",
         "classname": "button-circle-vk",
         })
         @@include('button.html', {
-
         "img": "../img/image-Telegram.png",
         "classname": "button-circle-telegram",
         })
       </div>
       @@include('button.html', {
-
       "text": "Связаться с нами",
       "classname": "button open_modal",
       })

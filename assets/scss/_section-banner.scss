@@ -49,8 +49,16 @@
     border-radius: 30px;
 
 }
-
+.mobile{
+    display:none;
+}
 @media (max-width: 900px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display:flex;
+    }
     .banner__left-questions {
         height: 25vw;
     }
