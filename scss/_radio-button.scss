@@ -1,0 +1,110 @@
+@import 'variables.scss';
+
+.checkbox_close {
+    display: none;
+}
+
+.form__input-radio {
+    border: 1px solid $color-black;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    &.checkbox {
+        .radio-button {
+            display: none;
+        }
+
+        &.highlighted {
+            .checkbox_close {
+                display: block;
+                position: relative;
+            }
+
+            .radio-button {
+                &:before {
+                    transform: translate(-50%, -50%) scale(1);
+
+                }
+            }
+
+            &:hover {
+                .checkbox_close {
+                    background: $color-purple;
+                    &:after {
+                        background-color:$color-white;
+                    }
+                    &:before {
+                        background-color:$color-white;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &.highlighted {
+        background-color: $color-black;
+        border-color: $color-black;
+        color: $color-white;
+
+        .radio-button {
+            &:before {
+                transform: translate(-50%, -50%) scale(1);
+
+            }
+        }
+
+        &:hover {
+            background: $color-black;
+
+            .radio-button {
+                &:before {
+                    background: $color-purple;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background: $color-purple;
+    }
+
+}
+
+.radio {
+    display: none;
+}
+
+.radio-button {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: $color-white;
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    vertical-align: text-top;
+    margin-right: 5px;
+
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: $color-black;
+        border-radius: 50%;
+        position: absolute;
+        left: 51%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 0.15s ease;
+
+    }
+
+}
