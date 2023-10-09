@@ -1,10 +1,12 @@
 @import 'variables.scss';
-.section-emoji{
+
+.section-emoji {
     width: 80vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
+
 @media (max-width: 600px) {
     .section-emoji {
         width: 100vw;
@@ -13,9 +15,9 @@
         flex-wrap: unset;
         flex-direction: row;
         overflow: scroll;
-        .button-light{
+
+        .button-light {
             white-space: nowrap;
         }
     }
 }
-

@@ -49,16 +49,20 @@
     border-radius: 30px;
 
 }
-.mobile{
-    display:none;
+
+.mobile {
+    display: none;
 }
+
 @media (max-width: 900px) {
-    .desktop{
+    .desktop {
         display: none;
     }
-    .mobile{
-        display:flex;
+
+    .mobile {
+        display: flex;
     }
+
     .banner__left-questions {
         height: 25vw;
     }

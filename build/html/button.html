@@ -1,14 +1,8 @@
-@@if (context.href) {
-    @@href
-}
 <button class="@@classname">
     @@if (context.text) {
     @@text
     }
     @@if (context.img) {
-    <img src="@@img" />
+    <img src="@@img" alt="@@img" />
     }
 </button>
-@@if (context.href_close) {
-    @@href_close
-}

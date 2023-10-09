@@ -59,11 +59,9 @@ button_next.onclick = function (event) {
     quiz__question2.classList.add('current');
     quiz__question1.classList.remove('current');
   } else if (window.getComputedStyle(quiz__section2).display == "block") {
-
     quiz__section1.style.display = 'none';
     quiz__section3.style.display = 'block';
     quiz__section2.style.display = 'none';
-
     quiz__question3.style.display = 'flex';
     quiz__question3.classList.add('current');
     quiz__question2.classList.remove('current');
@@ -91,7 +89,6 @@ for (let radio_button of quiz_radio_buttons) {
   if (radio_button) {
     radio_button.onclick = function () {
       for (button of quiz_radio_buttons) {
-
         button.classList.remove('highlighted');
         quiz__answer2.textContent = '';
       }

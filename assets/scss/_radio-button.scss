@@ -35,11 +35,13 @@
             &:hover {
                 .checkbox_close {
                     background: $color-purple;
+
                     &:after {
-                        background-color:$color-white;
+                        background-color: $color-white;
                     }
+
                     &:before {
-                        background-color:$color-white;
+                        background-color: $color-white;
                     }
                 }
 

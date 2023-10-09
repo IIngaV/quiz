@@ -83,7 +83,9 @@
     .carousel {
         height: 20em;
 
-        .button-slider-control, .button-slider-control-right, .button-slider-control-left {
+        .button-slider-control,
+        .button-slider-control-right,
+        .button-slider-control-left {
             display: none;
         }
 
