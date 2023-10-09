@@ -15,9 +15,7 @@
     "gulp-file-include": "^2.3.0",
     "gulp-sass": "^5.1.0",
     "node-sass": "^9.0.0",
-    "sass": "^1.68.0"
-  },
-  "dependencies": {
+    "sass": "^1.68.0",
     "gulp-replace": "^1.1.4"
   }
 }

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+<header class="header">
+  <nav class="nav">
+    <a class="nav__logo" href="#">
+      <img src="img/logo.svg" class="logo" width="209" height="50" alt="Логотип квиза">
+    </a>
+    <ul class="nav__menu">
+      <li><a href="/">Главная</a></li>
+      <li><a href="#quiz">Квиз</a></li>
+      <li><a href="#carousel">Отзывы</a></li>
+      <li><a href="/" class="down">Не главная</a>
+        <ul class="submenu">
+          <li><a href="">Подпункт</a></li>
+          <li><a href="">Еще подпункт</a></li>
+          <li><a href="">И еще подпункт</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="social_buttons">
+      
+<button class="button open_modal">
+    
+    Связаться с нами
+    
+    
+</button>
+
+      
+<button class="button-circle">
+    
+    
+    <img src="img/image-TikTok.png" />
+    
+</button>
+
+      
+<button class="button-circle-vk">
+    
+    
+    <img src="img/image-Vk.png" />
+    
+</button>
+
+      
+<button class="button-circle-telegram">
+    
+    
+    <img src="img/image-Telegram.png" />
+    
+</button>
+
+    </div>
+    <div class="mobile_navigation_icon"><img src="img/mobile-menu.svg" alt="mobile menu"></div>
+    <div class="mobile_navigation">
+      <ul class="nav__menu-mobile">
+        <li><a href="/">Главная</a><img src="img/right-arrow.svg"  width="20" height="20" alt="Стрелка"></li>
+        <li><a href="#quiz">Квиз</a><img src="img/right-arrow.svg"  width="20" height="20" alt="Стрелка"></li>
+        <li><a href="#carousel">Отзывы</a><img src="img/right-arrow.svg"  width="20" height="20" alt="Стрелка"></li>
+        <li><a href="/">Не главная</a><img src="img/right-arrow.svg"  width="20" height="20" alt="Стрелка"></li>
+        <ul class="submenu">
+          <li><a href="">Подпункт</a></li>
+          <li><a href="">Еще подпункт</a></li>
+          <li><a href="">И еще подпункт</a></li>
+        </ul>
+      </ul>
+      <div class="nav__menu-social-buttons">
+        
+<button class="button-circle">
+    
+    
+    <img src="img/image-TikTok.png" />
+    
+</button>
+
+        
+<button class="button-circle-vk">
+    
+    
+    <img src="img/image-Vk.png" />
+    
+</button>
+
+        
+<button class="button-circle-telegram">
+    
+    
+    <img src="img/image-Telegram.png" />
+    
+</button>
+
+      </div>
+      
+<button class="button open_modal">
+    
+    Связаться с нами
+    
+    
+</button>
+
+    </div>
+  </nav>
+</header>
+<script src="js/header.js"></script>
+  <!-- Content -->
+  <main>
+     <section class="banner">
+    <img src="img/questions-left.svg" class="banner__left-questions desktop" alt="Вопросы">
+    <img src="img/questions-left-mobile.svg" class="banner__left-questions mobile" alt="Вопросы">
+    <div class="banner__textblock">
+        <h1 class="banner__title">Это Супер-квиз!</h1>
+        <h4 class="banner__text">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят
+            проходить тесты!</h4>
+        
+    <a href='#quiz' style='text-decoration: none;'>
+
+<button class="button banner_button">
+    
+    Пройти супер-квиз
+    
+    
+</button>
+
+    </a>
+
+    </div>
+    <img src="img/questions-right.svg" class="banner__right-questions" alt="Вопросы">
+</section>
+
+    <section class="section-emoji">
+  
+<button class="button-light">
+    
+    Восхитительно
+    
+    
+    <img src="img/emoji-yum.png" />
+    
+</button>
+
+  
+<button class="button-light">
+    
+    Лучше не бывает
+    
+    
+    <img src="img/emoji-sunglasses.png" />
+    
+</button>
+
+  
+<button class="button-light">
+    
+    Где найти еще?
+    
+    
+    <img src="img/emoji-heart-eyes.png" />
+    
+</button>
+
+  
+<button class="button-light">
+    
+    В натуре четко!
+    
+    
+    <img src="img/emoji-star-struck.png" />
+    
+</button>
+
+  
+<button class="button-light">
+    
+    Круто
+    
+    
+    <img src="img/emoji-heart-eyes.png" />
+    
+</button>
+
+</section>
+    <section id="quiz" class="quiz">
+    <div class="quiz__left-block">
+        <aside class="quiz__question1 current">
+            <h5>Какие виды тестов вам нравятся?</h5>
+            <p class="quiz__answer1"></p>
+        </aside>
+        <aside class="quiz__question2">
+            <h5>Вы любите проходить тесты?</h5>
+            <p class="quiz__answer2"></p>
+        </aside>
+        <aside class="quiz__question3">
+            <h5>Спасибо за ответы! Заполните форму ниже</h5>
+            <p class="quiz__answer3"></p>
+        </aside>
+    </div>
+    <section class="quiz__block">
+        <div class="quiz__section1">
+            <h1 class="quiz__section-title">Какие виды тестов вам нравятся?</h1>
+            <p>Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг
+                понимаешь, что пролетело полдня.</p>
+            <br />
+            <section class="quiz__section-buttons">
+                <div class="quiz__checkbox-buttons">
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox1">
+        
+    </span>
+    На темперамент
+</label>
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox2">
+        
+    </span>
+    Кто я из вселенной Марвел
+</label>
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox3">
+        
+    </span>
+    Увидел это
+</label>
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox4">
+        
+    </span>
+    Мое тотемное животное
+</label>
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox5">
+        
+    </span>
+    На IQ
+</label>
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox6">
+        
+    </span>
+    На словарный запас
+</label>
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox7">
+        
+    </span>
+    На логическое мышление
+</label>
+                    <label  class="form__input-radio checkbox quiz_form__input-checkbox">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_checkbox"  class="radio @@radio_input_class" type="radio" value="quiz__checkbox8">
+        
+    </span>
+    На уровень интеллекта
+</label>
+                </div>
+
+            </section>
+        </div>
+        <div class="quiz__section2">
+            <h1 class="quiz__section-title">Вы любите проходить тесты?</h1>
+            <p>Нам важно узнать насолько часто Вы проходите тесты.</p>
+            <br />
+            <section class="quiz__section-buttons">
+                <div class="quiz__radio-buttons">
+                    <label  class="form__input-radio quiz_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_radio"  class="radio @@radio_input_class" type="radio" value="Нет, я не никогда не прохожу тесты">
+        
+    </span>
+    Нет, я не никогда не прохожу тесты
+</label>
+                    <label  class="form__input-radio quiz_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_radio"  class="radio @@radio_input_class" type="radio" value="Заставляю себя проходить тесты">
+        
+    </span>
+    Заставляю себя проходить тесты
+</label>
+                    <label  class="form__input-radio quiz_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_radio"  class="radio @@radio_input_class" type="radio" value="Не люблю проходить тесты, но иногда приходится">
+        
+    </span>
+    Не люблю проходить тесты, но иногда приходится
+</label>
+                    <label  class="form__input-radio quiz_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="quiz_radio"  class="radio @@radio_input_class" type="radio" value="Да, я прохожу все тесты">
+        
+    </span>
+    Да, я прохожу все тесты
+</label>
+                </div>
+            </section>
+
+        </div>
+        <div class="quiz__section3">
+            <img class="emoji-wink" src="img/emoji-ok.svg" alt="emoji-wink">
+            <h1 class="quiz__section-title">Спасибо за ответы! Заполните форму ниже</h1>
+            <p>Ваше мнение важно для нас. Прикрепите фото с Вашей любимой картинкой и оставьте комментарий насколько
+                понравился Вам тест.</p>
+            <br />
+            <section class="quiz__section-buttons">
+                <input class="quiz__text-input" type="text" placeholder="Ваше мнение сюда"><br>
+                <br>
+
+
+                <div class="quiz__select">
+                    <button class="select-button">
+                        <span class="selected-value">Очень понравился</span>
+                        <span class="arrow arrow-top"></span>
+                    </button>
+                    <ul class="select-dropdown active" role="listbox" id="select-dropdown">
+                        <li role="option">
+                            <input type="radio" name="select-dropdown" />
+                            <label>Очень понравился</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" name="select-dropdown" />
+                            <label>Не понравился</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" name="select-dropdown" />
+                            <label>Пройду еще раз</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" name="select-dropdown" />
+                            <label>Посоветую пройти всем</label>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <br>
+        <div class="quiz__buttons">
+            
+<button class="button-light-form button_prev">
+    
+     Назад
+    
+    
+</button>
+
+            
+<button class="button button_next">
+    
+    Продолжить
+    
+    
+</button>
+
+        </div>
+    </section>
+</section>
+<script src="js/quiz.js"></script>
+   <section id="carousel" class="carousel">
+  <ul id="carousel__viewport" class="carousel__viewport">
+    <li id="carousel__slide1" class="carousel__slide">
+      <div class="carousel__slide-text">
+        <img class="carousel__slide-image" src="img/avatar1.svg" alt="avatar">
+        <h3>Андрей Пархимович</h3>
+        <p>В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой
+          процесс внедрения и модернизации направлений прогрессивного развития.</p>
+      </div>
+    </li>
+    <li id="carousel__slide2" class="carousel__slide">
+      <div class="carousel__slide-text">
+        <img class="carousel__slide-image" src="img/avatar2.svg" alt="avatar">
+        <h3>Тимур Никитенко</h3>
+        <p>Господа, глубокий уровень погружения в значительной степени обусловливает
+          важность глубокомысленных рассуждений.</p>
+      </div>
+    </li>
+    <li id="carousel__slide3" class="carousel__slide">
+      <div class="carousel__slide-text">
+        <img class="carousel__slide-image" src="img/avatar3.svg" alt="avatar">
+        <h3>Артур Усович</h3>
+        <p>Задача организации, в особенности же убеждённость некоторых оппонентов
+          предопределяет высокую востребованность благоприятных перспектив.</p>
+      </div>
+      </div>
+    </li>
+    <li id="carousel__slide4" class="carousel__slide">
+      <div class="carousel__slide-text">
+        <img class="carousel__slide-image" src="img/avatar1.svg" alt="avatar">
+        <h3>Андрей Пархимович</h3>
+        <p>В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой
+          процесс внедрения и модернизации направлений прогрессивного развития.</p>
+      </div>
+    </li>
+    <li id="carousel__slide5" class="carousel__slide">
+      <div class="carousel__slide-text">
+        <img class="carousel__slide-image" src="img/avatar2.svg" alt="avatar">
+        <h3>Тимур Никитенко</h3>
+        <p>Господа, глубокий уровень погружения в значительной степени обусловливает
+          важность глубокомысленных рассуждений.</p>
+      </div>
+    </li>
+    <li id="carousel__slide6" class="carousel__slide">
+      <div class="carousel__slide-text">
+        <img class="carousel__slide-image" src="img/avatar3.svg" alt="avatar">
+        <h3>Артур Усович</h3>
+        <p>Задача организации, в особенности же убеждённость некоторых оппонентов
+          предопределяет высокую востребованность благоприятных перспектив.</p>
+      </div>
+      </div>
+    </li>
+  </ul>
+  
+<button class="button-light button-slider-control-left">
+    
+    
+    <img src="img/left-arrow.svg" />
+    
+</button>
+
+  
+<button class="button-light button-slider-control-right">
+    
+    
+    <img src="img/right-arrow.svg" />
+    
+</button>
+
+</section>
+<script src="js/section_slider.js"></script>
+   <section id="modal" class="modal bounceIn">
+    <div class="close"></div>
+    <div class="modal__contact-form">
+        <header class="modal__title">Заполните контактные данные</header>
+        <p>Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+        <form class="modal-form">
+            <input class="modal-form__text-input" type="text" placeholder="Ваше имя">
+            <input class="modal-form__text-input" type="text" placeholder="Фамилия"><br>
+            <div class="input-file">
+                <input class="modal-form__text-input-file" type="text" placeholder="Ваш комментарий">
+
+                
+<button class="button modal-file-button">
+    
+    Прикрепить файл
+    
+    
+    <img src="img/clip.svg" />
+    
+</button>
+
+                <div class="tooltip">
+                    <img class="modal-form__warning" src="img/warning.svg" alt="warning">
+                    <div class="tooltip__block">Это обязательное поле</div>
+                </div>
+                <input id="button_file" type='file' /><br>
+            </div>
+
+            <p>Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+            <div class="form__radio-buttons">
+                <label  class="form__input-radio modal_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="radio"  class="radio @@radio_input_class" type="radio" value="1">
+        
+    </span>
+    Не знаю
+</label>
+                <label  class="form__input-radio modal_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="radio"  class="radio @@radio_input_class" type="radio" value="2">
+        
+    </span>
+    Увидел
+</label>
+                <label  class="form__input-radio modal_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="radio"  class="radio @@radio_input_class" type="radio" value="3">
+        
+    </span>
+    Вон то
+</label>
+                <label  class="form__input-radio modal_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="radio"  class="radio @@radio_input_class" type="radio" value="4">
+        
+    </span>
+    Вон то
+</label>
+                <label  class="form__input-radio modal_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="radio"  class="radio @@radio_input_class" type="radio" value="5">
+        
+    </span>
+    Увидел
+</label>
+                <label  class="form__input-radio modal_form__input-radio">
+    <div class="checkbox_close"></div>
+    <span class="radio-button @@radio_button_class">
+        <input name="radio"  class="radio @@radio_input_class" type="radio" value="6">
+        
+    </span>
+    Не знаю
+</label>
+
+            </div>
+            <br>
+            
+<button class="button-modal">
+    
+    Продолжить
+    
+    
+</button>
+
+
+        </form>
+    </div>
+    <div class="modal__contact-success">
+        <img class="emoji-wink" src="img/emoji-wink.svg" alt="emoji-wink">
+        <header class="modal__title">Ваши данные отправлены</header>
+        <p>Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+        <br><br>
+        
+<button class="button-modal back-to-site">
+    
+    Вернуться на сайт
+    
+    
+</button>
+
+        <br>
+    </div>
+</section>
+<script src="js/modal.js"></script>
+  </main>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer__contacts">
+    <div class="footer__item">
+      <p>Телефон</p>
+      <a class="footer__link" href="tel:+375299502745">+375299502745</a>
+    </div>
+    <div class="footer__item">
+      <p>Email</p>
+      <a class="footer__link" href="mailto:ourmail@gmail.com">ourmail@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer__social">
+    <div class="footer__button">
+  
+<button class="button-oval-tiktok">
+    
+    
+    <img src="img/image-TikTok.png" />
+    
+</button>
+
+  
+<button class="button-oval-vk">
+    
+    
+    <img src="img/image-Vk.png" />
+    
+</button>
+
+  
+<button class="button-oval-telegram">
+    
+    
+    <img src="img/image-Telegram.png" />
+    
+</button>
+
+</div>
+<div class="footer__button">
+  <a class="footer__logo" href="#">
+    <img src="img/logo-white.svg" class="logo" width="209" height="50" alt="Логотип квиза">
+  </a>
+  </div>
+</div>
+</footer>
+</body>
+
+</html>
